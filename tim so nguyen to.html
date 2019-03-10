@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<input type="text" id="myInput"/>
+<button type="button" onclick="myClick()">CHECK!</button>
+<body>
+<script>
+    function myClick() {
+        let a = parseInt(document.getElementById("myInput").value);
+        let flag = true;
+        if (a < 2){
+            flag = false;
+        }else {
+           for (let i =2;i < a; i++) {
+    if(a%i === 0){ flag = false;
+    break;
+                }
+            }
+        }if (flag === true){
+            document.write(a+" la snt");
+    }else {
+        document.write( a + " ko phai la snt" );
+    }
+    }
+</script>
+</body>
+</html>

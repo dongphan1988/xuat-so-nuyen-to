@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="soNTcanxuat">
+<button type="button" onclick="myOutput()">OK</button>
+<script>
+    function myOutput(){
+    let number = parseInt(document.getElementById("soNTcanxuat").value);
+    let i = 0;
+
+    for(let count = 0;count < number; ) {
+        if (ilasont(i)){
+            document.write(i + "la so nt"+ "<br>");
+            count++
+        }i++
+    } }
+    function ilasont(a) {
+        if(a<2){return false;}
+        for(let i = 2 ;i < a;i++){
+            if ((a%i) === 0){return false;
+            }
+        }return true;
+    }
+
+</script>
+</body>
+
+</html>
